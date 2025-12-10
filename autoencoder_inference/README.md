@@ -3,6 +3,8 @@
 学習済みのオートエンコーダーモデルを読み込み、カメラ映像に対してリアルタイムで異常検知を行うツールです。
 MLflowのModel Registryからモデルを取得し、設定した閾値に基づいて「正常(NORMAL)」か「異常(ANOMALY)」かを判定します。
 
+![Image](https://github.com/user-attachments/assets/8cdc6607-ecd7-4aca-9f3d-7d0c2646d103)
+
 ## 運用環境(Jetson)での動作イメージ
 
 ![Image](https://github.com/user-attachments/assets/8cdc6607-ecd7-4aca-9f3d-7d0c2646d103)
