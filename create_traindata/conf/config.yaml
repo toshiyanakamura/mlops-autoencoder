@@ -1,0 +1,4 @@
+target: create_traindata/kinoko2 # データセット名
+anomaly: anomaly # 異常データフォルダ名
+camera: 1 # カメラID
+crop_size: [256, 256] # クロップサイズ [高さ, 幅]

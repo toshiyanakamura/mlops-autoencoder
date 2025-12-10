@@ -1,0 +1,25 @@
+dataset:
+  root_dir: "autoencoder_poc/data/kinoko"  # データセットのルートディレクトリ
+  train_dir: "train/good" # トレーニングデータのサブディレクトリ
+  test_dir: "test" # テストデータのサブディレクトリ
+  input_size: [256, 256] # 入力画像のサイズ
+  channels: 3 # 画像のチャンネル数 (例: RGB画像なら3)
+  validation_ratio: 0.1 # トレーニングデータのうち、検証データに使用する割合
+  batch_size: 32 # バッチサイズ
+  num_workers: 0 # データローダーのワーカースレッド数
+
+model:
+  enc_channels: [32, 64, 128] # エンコーダの各層のチャネル数
+  latent_dim: 32 # 潜在空間の次元数
+
+training:
+  epochs: 100 # トレーニングのエポック数
+  learning_rate: 0.001 # 学習率
+  early_stopping_patience: 5 # 早期停止の忍耐エポック数
+  resume_model_path: null # 事前学習済みモデルのパス (nullの場合は新規トレーニング)
+
+mlflow:
+  experiment_name: "Autoencoder_Anomaly_Detection" # MLflowの実験名
+  tracking_uri: "http://localhost:8080" # MLflowのトラッキングURI
+  run_name: null # MLflowのラン名 (nullの場合は自動生成)
+  model_name: "autoencoder_model" # 保存するモデルの名前

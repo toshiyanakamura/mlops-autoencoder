@@ -1,0 +1,17 @@
+mlflow:
+  uri: "http://localhost:8080" # MLflowトラッキングサーバーURI
+  experiment_name: "Autoencoder_Inference" # 実験名
+  model_name: "kinoko" # 登録されたモデル名
+  model_version: "latest"  # "latest"または特定のバージョン番号
+
+model:
+  input_height: 256 # モデルへ入力画像の高さ(ピクセル)
+  input_width: 256 # モデルへ入力画像の幅(ピクセル)
+  input_channels: 3
+
+inference:
+  camera_id: 1 # 使用するカメラのID
+  initial_threshold: 0.004 # 異常検知閾値
+  window_name: "Autoencoder Anomaly Detection" # 表示ウィンドウの名前
+  crop_height: 256 # 画像クロップ高さ(クロップしてモデルに入力する)
+  crop_width: 256  # 画像クロップ幅(クロップしてモデルに入力する)
