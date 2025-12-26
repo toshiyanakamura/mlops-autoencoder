@@ -10,7 +10,7 @@ model:
   input_channels: 3
 
 inference:
-  camera_id: 1 # 使用するカメラのID
+  camera_id: 0 # 使用するカメラのID
   initial_threshold: 0.004 # 異常検知閾値
   window_name: "Autoencoder Anomaly Detection" # 表示ウィンドウの名前
   crop_height: 256 # 画像クロップ高さ(クロップしてモデルに入力する)

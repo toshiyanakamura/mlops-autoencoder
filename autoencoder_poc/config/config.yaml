@@ -9,12 +9,12 @@ dataset:
   num_workers: 0 # データローダーのワーカースレッド数
 
 model:
-  enc_channels: [32, 64, 128] # エンコーダの各層のチャネル数
-  latent_dim: 32 # 潜在空間の次元数
+  enc_channels: [32, 64] # エンコーダの各層のチャネル数
+  latent_dim: 4 # 潜在空間の次元数
 
 training:
-  epochs: 100 # トレーニングのエポック数
-  learning_rate: 0.001 # 学習率
+  epochs: 10 # トレーニングのエポック数
+  learning_rate: 0.0000001 # 学習率
   early_stopping_patience: 5 # 早期停止の忍耐エポック数
   resume_model_path: null # 事前学習済みモデルのパス (nullの場合は新規トレーニング)
 
